@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Virtual Screening</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Virtual Screening</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class href="#overview">Overview</a></li>
+        <li><a href="#scoring-functions">Scoring functions</a></li>
+        <li><a href="#future">Future Directions</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#overview">Overview</a></li>
+		    <li><a href="#scoring-functions">Scoring functions</a></li>
+        <li><a href="#future">Future Directions</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container center">
+        <h1 class="header black-text">A modern drug discovery technique</h1>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/img3.jpg" alt=""></div>
+  </div>
+
+  <div class="container" >
+    <div class="section scrollspy" id="overview">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Overview</h4>
+          <p class="left-align">Virtual screening is a computational technique used in
+            <a class="tooltipped" data-position="top" data-tooltip="process by which new candidate medications are developed">drug discovery</a>
+            . It automatically evaluates very large libraries of compounds and identifies structures that are likely to bind to a
+            <a class="tooltipped" data-position="top" data-tooltip="protein in the body whose activity is modified">target molecule</a>
+            . Virtual screening is a difficult process because of how enormous the
+            <a class="tooltipped" data-position="top" data-tooltip="concept referring to the set of all possible molecules and chemical compounds">chemical space</a>
+             is. In practice this number is reduced to the chemicals that are easy to be
+            <a class="tooltipped" data-position="top" data-tooltip="made chemically">synthesized</a>
+             or purchased. Virtual Screening has two different variations:
+            <a class="tooltipped" data-position="top" data-tooltip="a molecule that binds to a (bigger) molecule">ligand</a>-based virtual screening and structure-based virtual screening.
+          </p>
+        </div>
+      </div>
+
+      <!--   Icon Section   -->
+      <div class="row">
+
+
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">timeline</i></h2>
+              <h5 class="center">Structure-based</h5>
+
+              <p class="light">Involves the analysis of a compound in which the 3D structure is known. Estimates the
+              <a class="tooltipped" data-position="top" data-tooltip="sum of energies that holds two atoms together">binding strength</a>
+              between the target molecule and another molecule using a mathematical method called a scoring function.</p>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">gesture</i></h2>
+              <h5 class="center">Ligand-based</h5>
+
+              <p class="light">Involves the detailed analysis of active ligands to predict how similar ligands will react. This method is typically used when the 3D structure of the target molecule is unknown. Because of the uncertainty of the molecule's structure, this variation is more theoretical than structure-based variations.</p>
+            </div>
+          </div>
+          <div class="col s12">
+            <p>NOTE: the rest of this web page will refer to techniques used in Structure-based virtual screening.</p>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 center">
+          <p class="left-align">
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/img1.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section scrollspy" id="scoring-functions">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Scoring Functions</h4>
+          <p class="left-align">Computational methods are used to test thousands of possible interactions between a target molecule and compounds in a chemical library. The quality of the
+          <a class="tooltipped" data-position="top" data-tooltip="attractive or repulsive forces between molecules">interactions</a>
+          are formulated using mathematical method called a scoring function to produce a score of a compound. Creating this scoring function is a crucial part of virtual screening because it directly affects the accuracy of the score. Scoring functions are commonly separated into three categories:
+          </p>
+        </div>
+        <div class="col s12">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">blur_on</i>Forcefield-based</div>
+              <div class="collapsible-body"><span>Forcefield-based scoring functions are based on the summation of protein-ligand interaction energies and internal ligand energies using well-documented molecular mechanics
+              <a class="tooltipped" data-position="top" data-tooltip="set of specifications used to calculate the potential energy of a system of molecules">forcefield parameters</a>.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">functions</i>Empirically-derived</div>
+              <div class="collapsible-body"><span>Derived by summing a set of individual energy terms, terms such as hydrogen bonds, hydrophobic effects, entropy, etc.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">school</i>Knowledge-based</div>
+              <div class="collapsible-body"><span>Energy terms are derived directly from experimentally determined structural information. Then, binding energy is calculated by adding the interaction terms of each possible protein-ligand atom pair in the entire complex using
+              <a class="tooltipped" data-position="top" data-tooltip="probability measure of particles in a system over various possible states">Boltzmann distributions</a>.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col s12">
+          <p>There is still debate about the existence a fourth category of scoring functions that involves the use of
+          <a class="tooltipped" data-position="top" data-tooltip="provides systems the ability to automatically learn and improve from experience ">machine learning</a>
+          . These debates are becoming less common as the scoring techniques are being researched. Machine learning or descriptor-based scoring functions learns patterns within structural information and then uses what it knows to make predictions about a target molecule.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/img2.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <div class="container">
+    <div class="section scrollspy" id="future">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Future Directions</h4>
+          <p class="left-align">Structure-based virtual screening seems to have a bright future ahead of it. The newest machine learning methods are now being implemented in virtual screening with great success. As new computational techniques are developed more virtual screening techniques will arise and as computers get more powerful these techniques will become more accurate.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">References</h5>
+          <ol>
+            <li><a class="white-text" href="https://doi.org/10.2174/157340909787580863">Computational Intelligence Methods for Docking Scores</a></li>
+            <li><a class="white-text" href="https://doi.org/10.3390/ijms11083016">Advances and challenges in protein-ligand docking</a></li>
+            <li><a class="white-text" href="https://doi.org/10.1038/nrd1549">Docking and scoring in virtual screening for drug discovery: Methods and applications</a></li>
+            <li><a class="white-text" href="https://doi.org/10.1021/ci500731a">Classification of current scoring functions</a></li>
+            <li><a class="white-text" href="https://doi.org/10.1016/j.cbpa.2007.08.033">Virtual screening strategies in drug discovery</a></li>
+            <li><a class="white-text" href="https://doi.org/10.1038/sj.bjp.0707515">Towards the development of universal, fast and highly accurate docking/scoring methods: a long way to go</a></li>
+            <li><a class="white-text" href="https://doi.org/10.1021/acs.jcim.6b00355">Boosting docking-based virtual screening with deep learning</a></li>
+          </ol>
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">Learn more!</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.researchgate.net/topic/Virtual-Screening">Research Gate</a></li>
+            <li><a class="white-text" href="https://www.fda.gov/ForPatients/Approvals/Drugs/default.htm">The Drug Development Process - U.S Food & Drug Administration</a></li>
+
+
+          </ul>
+        </div>
+
+        <div class="col s12">
+          <p>Interested in learning more about scoring functions? <a href="img/review.pdf">Click here</a> to read my literature review about them.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://github.com/diegog">Diego Garcia</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
